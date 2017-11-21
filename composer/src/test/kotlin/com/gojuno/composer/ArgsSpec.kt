@@ -138,7 +138,7 @@ class ArgsSpec : Spek({
     context("parse args with --keep-output-on-exit") {
 
         val args by memoized {
-            parseArgs(rawArgsWithOnlyRequiredFields + "--keep-output-on-exit")
+            parseArgs(rawArgsWithOnlyRequiredFields + arrayOf("--keep-output-on-exit", "true"))
         }
 
         it("parses --keep-output-on-exit correctly") {

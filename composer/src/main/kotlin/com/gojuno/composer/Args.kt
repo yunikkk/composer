@@ -77,7 +77,8 @@ data class Args(
         @Parameter(
                 names = arrayOf("--keep-output-on-exit"),
                 required = false,
-                description = "Keep output on exit. False by default.",
+                arity = 1,
+                description = "Either `true` or `false` to keep/remove output on exit. False by default.",
                 order = 8
         )
         var keepOutputOnExit: Boolean = false,
